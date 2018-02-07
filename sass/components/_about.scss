@@ -1,0 +1,45 @@
+.about{
+
+    &__image{
+        margin: 4rem;
+        width: 27rem;
+        height: 27rem;
+        float: left;
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        position: relative;
+        background-image: radial-gradient(at left top, $color-primary-light 25%, $color-primary-dark 55%);
+        transition: 2s;
+
+    }
+
+    &__photo{
+        position: absolute;
+        margin: 1rem;
+        width: 25rem;
+        height: 25rem;
+        float: left;
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        transition: 2s;
+    }
+
+    &__text{
+        font-size: 2rem;
+        text-align: justify;
+    }
+
+    &:hover &__text > .terciary-heading{
+        background-position: 0 0;
+    }
+    &:hover .about__image{
+         transform:rotate(90deg) scale(1.05);
+    }
+    &:hover .about__photo{
+         transform:rotate(-90deg);
+    }
+}

@@ -1,0 +1,47 @@
+.details{
+
+    &__items{
+        padding: 2rem;
+        padding-top: 1rem;
+
+        &:hover &--icon{
+            transform: scale(1.1);
+        }
+        &:hover &--text{
+            width: 100%;
+            background-image: radial-gradient(at top center, $color-primary-light 25%, $color-primary-dark 55%);
+            -webkit-background-clip: text;
+            color: transparent;
+            background-position: -3rem;
+            animation: bgPosition 1.5s linear 1 both;
+        }
+
+        &--icon{
+            font-size: 2rem;
+            border-radius: 5px;
+            @include backgroundImage__Icon;
+            float: left;
+            transition: 1s;
+
+            &-social{
+                &:not(:first-child){
+                    margin-left: 2rem;
+                }
+            }
+        }
+
+        &--text{
+            font-size: 1.8rem;
+            margin-left: 2rem;
+
+            &-small{
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    &:hover  .terciary-heading {
+        background-position: 0 0;
+    }
+
+}
