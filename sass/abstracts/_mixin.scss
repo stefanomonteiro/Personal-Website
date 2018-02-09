@@ -1,13 +1,27 @@
-@mixin clearfix{ //ClearFix append a pseudo element after the element which will then clear these floats
+@mixin clearfix{
     &::after{
-        content:""; //content property so the pseudo element will mot appear on the page. Empty beacuse we don't want to see it.
-        display: table; // standars version of clearfix, use display:table;
-        clear: both; //clear both float, left or right;
+        content:"";
+        display: table;
+        clear: both;
     }
 }
 
-@mixin backgroundImage__Header--Secondary {
+@mixin center {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin backgroundImage__Header--Secondary-Blue {
     background-image: radial-gradient(at top center, $color-primary-light 30%, $color-primary-dark 60%);
+    -webkit-background-clip: text;
+    color: transparent;
+    background-position: -15rem 0;
+}
+
+@mixin backgroundImage__Header--Secondary-White {
+    background-image: radial-gradient(at top center, #baeafb 30%, #5391a7 60%);
     -webkit-background-clip: text;
     color: transparent;
     background-position: -15rem 0;
@@ -15,6 +29,13 @@
 
 @mixin backgroundImage__Header--Terciary {
     background-image: radial-gradient(at top center, $color-primary-light 25%, $color-primary-dark 55%);
+    -webkit-background-clip: text;
+    color: transparent;
+    background-position: -8rem 0;
+}
+
+@mixin backgroundImage__Header--Terciary-White {
+    background-image: radial-gradient(at top center, #baeafb 25%, #9ad9ef 55%);
     -webkit-background-clip: text;
     color: transparent;
     background-position: -8rem 0;
@@ -29,9 +50,3 @@
     color: transparent;
 }
 
-@mixin center {
-    position: absolute;
-    top: 50%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-}

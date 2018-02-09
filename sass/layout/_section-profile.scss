@@ -1,8 +1,7 @@
 .section-profile{
-    margin-top: 4rem;
-    margin-bottom: 100rem;
 
-    &:hover div > .secondary-heading {
+    //Changes The h2 When Whole Section is Hovered.
+    &:hover div > .secondary-heading--blue {
         background-position: 10rem 0;
     }
 }

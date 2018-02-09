@@ -21,7 +21,7 @@
             border-radius: 5px;
             @include backgroundImage__Icon;
             float: left;
-            transition: 1s;
+            transition: 1s ease-in-out;
 
             &-social{
                 &:not(:first-child){

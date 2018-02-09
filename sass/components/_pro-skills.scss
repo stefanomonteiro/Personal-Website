@@ -1,0 +1,50 @@
+.pro-skills{
+    &__list{
+        list-style: none;
+        padding: 2rem 4rem;
+    }
+
+    &__item{
+        font-size: 1.8rem;
+        color: $color-grey-light-2;
+        border-radius: 3rem;
+        text-align: left;
+        padding: 1rem 4rem;
+        position: relative;
+        transition: all .6s ease-in-out;
+
+        &:hover{
+            background-color: rgba(255,255,255,.1);
+            box-shadow: inset 2px 2px 5px rgba(0,0,0,.1);
+            color: #FFF;
+            // transform: scale(1.05);
+        }
+
+//Stopped Working Here
+        // &:hover &__rating::after{
+        //     width: 0;
+        // }
+    }
+
+    &__rating{
+        width: 15rem;
+        height: 1rem;
+        background-image: linear-gradient(to right bottom, $color-white 55%, $color-grey-dark-1 99%);
+        color: transparent;
+        border-radius: 1rem;
+        position: absolute;
+        right: 4.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &::after{
+            content: "";
+            width: 10rem;
+            height: 1rem;
+            border-radius: 1rem;
+            display: inline-block;
+            transform: translateY(-119%);
+            @include backgroundImage__Icon;
+        }
+    }
+}
