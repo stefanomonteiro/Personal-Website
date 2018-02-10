@@ -1,0 +1,29 @@
+.skills{
+    &__list{
+        list-style: none;
+        padding: 2rem 4rem;
+    }
+
+    &__item{
+        font-size: 1.8rem;
+        color: $color-grey-light-2;
+        border-radius: 3rem;
+        text-align: left;
+        padding: 1rem 4rem;
+        position: relative;
+        transition: all .6s ease-in-out;
+
+        &:hover{
+            background-color: rgba(255,255,255,.1);
+            box-shadow: inset 2px 2px 5px rgba(0,0,0,.1);
+            color: #FFF;
+        }
+
+    }
+    // Creates 5 classes .skills__rating-$i where $i goes from 5 to 10.
+     @for $i from 5 through 10{
+        &__rating-#{$i} {
+            @include rating($i);
+        }
+    }
+}

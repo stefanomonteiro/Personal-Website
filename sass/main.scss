@@ -1,4 +1,5 @@
 
+@import "abstracts/functions";
 @import "abstracts/mixin";
 @import "abstracts/variables";
 
@@ -10,7 +11,7 @@
 
 @import "components/about";
 @import "components/details";
-@import "components/pro-skills";
+@import "components/skills";
 
 @import "layout/header";
 @import "layout/section-profile";

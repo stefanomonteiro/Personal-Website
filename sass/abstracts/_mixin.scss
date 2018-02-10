@@ -50,3 +50,24 @@
     color: transparent;
 }
 
+@mixin rating($score){
+    width: $rating-white-bar-width;
+    height: 1rem;
+    background-image: linear-gradient(to right bottom, $color-white 55%, $color-grey-dark-1 99%);
+    color: transparent;
+    border-radius: 1rem;
+    position: absolute;
+    right: 4.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &::after{
+        content: "";
+        width: ratingBar($rating-white-bar-width, $score);
+        height: 1rem;
+        border-radius: 1rem;
+        display: inline-block;
+        transform: translateY(-120%);
+        @include backgroundImage__Icon;
+    }
+}

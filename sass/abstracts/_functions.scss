@@ -1,0 +1,13 @@
+// Works Out the width of the rating bar according to rating.
+// Must name class .skills__rating-('number') where 'number' is the rating score.
+@function ratingBar ($width, $rating) {
+    @return $width*($rating/10);
+}
+
+// @function createRatingClass {
+//     @for $i from 5 through 10{
+//         &__rating-#{$i} {
+//             @include rating(#{i});
+//         }
+//     }
+// }
