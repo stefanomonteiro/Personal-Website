@@ -178,6 +178,36 @@ body {
 .details:hover .terciary-heading {
   background-position: 0 0; }
 
+.education {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .education__group {
+    margin: 3rem;
+    padding: 1rem;
+    border-width: 2px;
+    border-style: solid;
+    border-image: linear-gradient(to right bottom, #06729a 15%, #36cbff 30%, #06729a 50%) 72 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform .4s linear; }
+    .education__group:hover {
+      border-image: linear-gradient(to left bottom, #06729a 15%, #36cbff 30%, #06729a 50%) 72 1;
+      transform: scale(1.05); }
+    .education__group:hover .terciary-heading {
+      background-position: 13rem 0; }
+    .education__group:not(:first-child) {
+      align-self: flex-end; }
+  .education__date {
+    align-self: left;
+    font-size: 1.4rem; }
+  .education__type {
+    width: 100%; }
+  .education__school {
+    font-size: 2rem; }
+
 .skills__list {
   list-style: none;
   padding: 2rem 4rem; }
@@ -329,7 +359,10 @@ body {
 .section-profile:hover div > .secondary-heading--blue {
   background-position: 10rem 0; }
 
-.section-experience {
+.section-skills {
   height: 100%;
   width: 100%;
   background: linear-gradient(to right bottom, #0292c4, #06729a); }
+
+.section-education:hover div > .secondary-heading--blue {
+  background-position: 10rem 0; }

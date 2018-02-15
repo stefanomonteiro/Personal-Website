@@ -1,0 +1,7 @@
+.section-education{
+
+    //Changes The h2 When Whole Section is Hovered.
+    &:hover div>.secondary-heading--blue {
+        background-position: 10rem 0;
+    }
+}
