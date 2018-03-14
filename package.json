@@ -9,10 +9,17 @@
   },
   "author": "Stefano Monteiro",
   "license": "ISC",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "live-server": "^1.2.0",
     "node-sass": "^4.7.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefanomonteiro/Personal-Website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stefanomonteiro/Personal-Website/issues"
+  },
+  "homepage": "https://github.com/stefanomonteiro/Personal-Website#readme"
 }
