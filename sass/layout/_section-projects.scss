@@ -1,0 +1,9 @@
+.section-projects {
+  //Changes The h2 When Whole Section is Hovered.
+  &:hover div > .secondary-heading--blue {
+    background-position: 10rem 0;
+  }
+  &:hover .projects__figure::before {
+    transform: rotate(90deg);
+  }
+}

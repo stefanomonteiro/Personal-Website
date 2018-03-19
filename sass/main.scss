@@ -1,4 +1,3 @@
-
 @import "abstracts/functions";
 @import "abstracts/mixin";
 @import "abstracts/variables";
@@ -13,8 +12,12 @@
 @import "components/details";
 @import "components/education";
 @import "components/skills";
+@import "components/courses";
+@import "components/projects";
 
 @import "layout/header";
 @import "layout/section-profile";
 @import "layout/section-skills";
 @import "layout/section-education";
+@import "layout/section-courses";
+@import "layout/section-projects";

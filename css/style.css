@@ -58,11 +58,12 @@ body {
     display: block;
     font-size: 6.2rem;
     font-weight: 300;
-    letter-spacing: 1.3rem; }
+    letter-spacing: 1.3rem;
+    white-space: nowrap; }
   .primary-heading--sub {
     display: block;
     font-weight: 400;
-    letter-spacing: .5rem; }
+    letter-spacing: 0.5rem; }
 
 .secondary-heading {
   width: 60%;
@@ -85,7 +86,7 @@ body {
   font-size: 2rem;
   font-weight: 700;
   display: inline-block;
-  letter-spacing: .3rem; }
+  letter-spacing: 0.3rem; }
   .terciary-heading--blue {
     background-image: radial-gradient(at top center, #36cbff 25%, #06729a 55%);
     -webkit-background-clip: text;
@@ -179,12 +180,13 @@ body {
   background-position: 0 0; }
 
 .education {
-  width: 75%;
+  padding: 0 15rem;
   display: flex;
   flex-direction: column;
   align-items: center; }
   .education__group {
     margin: 3rem;
+    min-width: 57rem;
     padding: 1rem;
     border-width: 2px;
     border-style: solid;
@@ -192,21 +194,26 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform .4s linear; }
+    transition: transform 0.4s linear; }
     .education__group:hover {
       border-image: linear-gradient(to left bottom, #06729a 15%, #36cbff 30%, #06729a 50%) 72 1;
       transform: scale(1.05); }
     .education__group:hover .terciary-heading {
       background-position: 13rem 0; }
-    .education__group:not(:first-child) {
+    .education__group:nth-child(even) {
       align-self: flex-end; }
+    .education__group:nth-child(odd) {
+      align-self: flex-start; }
   .education__date {
     align-self: left;
     font-size: 1.4rem; }
   .education__type {
-    width: 100%; }
+    width: 100%;
+    text-align: center; }
   .education__school {
-    font-size: 2rem; }
+    font-size: 2rem;
+    text-decoration: none;
+    color: #777; }
 
 .skills__list {
   list-style: none;
@@ -345,6 +352,139 @@ body {
     background-image: linear-gradient(to right bottom, #36cbff, #06729a);
     color: transparent; }
 
+.courses {
+  padding: 0 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .courses__group {
+    margin: 3rem;
+    min-width: 57rem;
+    padding: 1rem;
+    border-width: 2px;
+    border-style: solid;
+    border-image: linear-gradient(to right bottom, #ddd 15%, #f7f7f7 30%, #ddd 50%) 72 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.4s linear; }
+    .courses__group:hover {
+      border-image: linear-gradient(to left bottom, #f7f7f7 15%, #ddd 30%, #f7f7f7 50%) 72 1;
+      transform: scale(1.05); }
+    .courses__group:hover .terciary-heading {
+      background-position: 13rem 0; }
+    .courses__group:nth-child(even) {
+      align-self: flex-end; }
+    .courses__group:nth-child(odd) {
+      align-self: flex-start; }
+  .courses__date {
+    align-self: left;
+    font-size: 1.4rem;
+    color: #ddd; }
+  .courses__type {
+    width: 100%;
+    text-align: center; }
+  .courses__school {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #ddd; }
+  .courses__link-icon {
+    fill: #fff;
+    width: 3rem;
+    height: 3rem; }
+
+.projects {
+  padding: 0 5rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+  .projects__group {
+    flex: 0 0 calc(100% / 3); }
+    .projects__group:hover .projects__footer {
+      transform: translateY(0);
+      opacity: 1;
+      transition: all 2s ease 1s; }
+    .projects__group:hover .projects__link {
+      transform: translateY(0);
+      opacity: 1;
+      transition: all 2s ease 1s; }
+    .projects__group:hover .projects__figure::before {
+      opacity: 0;
+      top: 100%;
+      transition: all 2s ease, top 0.1s ease 2s; }
+    .projects__group:hover .projects__text {
+      opacity: 0;
+      top: 200%;
+      transition: all 3s ease; }
+  .projects__figure {
+    margin: 3rem;
+    max-height: 50rem;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0.3rem 0.3rem 1rem rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column; }
+    .projects__figure::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      height: 200%;
+      width: 200%;
+      border-radius: 100rem;
+      background: radial-gradient(at left top, rgba(54, 203, 255, 0.9) 20%, rgba(54, 203, 255, 0.9) 30%, rgba(6, 114, 154, 0.9) 50%);
+      transition: all 3s ease 0.4s, top 0.1s ease; }
+  .projects__image-container {
+    overflow: auto; }
+  .projects__image {
+    width: 100%;
+    height: 90%;
+    margin-bottom: 10%; }
+  .projects__text {
+    font-size: 1.5rem;
+    text-align: justify;
+    color: #f7f7f7;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6);
+    width: 90%;
+    height: 90%;
+    padding: 2rem;
+    border-radius: 5px;
+    transition: all 3s ease 0.4s; }
+  .projects__list {
+    padding: 1rem; }
+    .projects__list-items:not(:first-child) {
+      padding-top: 0.5rem; }
+    .projects__list-items:not(:last-child) {
+      padding-bottom: 0.5rem; }
+  .projects__footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 10%;
+    width: 100%;
+    background: radial-gradient(at right top, rgba(54, 203, 255, 0.9), rgba(6, 114, 154, 0.9));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform-origin: bottom;
+    transition: all 1s ease; }
+  .projects__link {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0.6rem 35%;
+    text-decoration: none;
+    color: #f7f7f7;
+    font-size: 1.6rem;
+    white-space: nowrap;
+    border-radius: 5px;
+    transform: translateY(5rem);
+    opacity: 0; }
+
 .header {
   height: 90vh;
   width: 100%;
@@ -366,3 +506,14 @@ body {
 
 .section-education:hover div > .secondary-heading--blue {
   background-position: 10rem 0; }
+
+.section-courses {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right bottom, #0292c4, #06729a); }
+
+.section-projects:hover div > .secondary-heading--blue {
+  background-position: 10rem 0; }
+
+.section-projects:hover .projects__figure::before {
+  transform: rotate(90deg); }

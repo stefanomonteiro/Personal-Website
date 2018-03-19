@@ -1,0 +1,70 @@
+.courses {
+  padding: 0 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__group {
+    margin: 3rem;
+    min-width: 57rem;
+    padding: 1rem;
+    border-width: 2px;
+    border-style: solid;
+    border-image: linear-gradient(
+        to right bottom,
+        $color-grey-light-3 15%,
+        $color-grey-light-1 30%,
+        $color-grey-light-3 50%
+      )
+      72 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.4s linear;
+
+    &:hover {
+      border-image: linear-gradient(
+          to left bottom,
+          $color-grey-light-1 15%,
+          $color-grey-light-3 30%,
+          $color-grey-light-1 50%
+        )
+        72 1;
+      transform: scale(1.05);
+    }
+
+    &:hover .terciary-heading {
+      background-position: 13rem 0;
+    }
+
+    &:nth-child(even) {
+      align-self: flex-end;
+    }
+    &:nth-child(odd) {
+      align-self: flex-start;
+    }
+  }
+
+  &__date {
+    align-self: left;
+    font-size: 1.4rem;
+    color: $color-grey-light-3;
+  }
+
+  &__type {
+    width: 100%;
+    text-align: center;
+  }
+
+  &__school {
+    font-size: 2rem;
+    text-decoration: none;
+    color: $color-grey-light-3;
+  }
+
+  &__link-icon {
+    fill: #fff;
+    width: 3rem;
+    height: 3rem;
+  }
+}

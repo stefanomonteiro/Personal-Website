@@ -1,0 +1,131 @@
+.projects {
+  padding: 0 5rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  &__group {
+    flex: 0 0 calc(100% / 3);
+
+    // When each project is hovered
+    &:hover .projects__footer {
+      transform: translateY(0);
+      opacity: 1;
+      transition: all 2s ease 1s;
+    }
+
+    &:hover .projects__link {
+      transform: translateY(0);
+      opacity: 1;
+      transition: all 2s ease 1s;
+    }
+
+    &:hover .projects__figure::before {
+      opacity: 0;
+      top: 100%;
+      transition: all 2s ease, top 0.1s ease 2s;
+    }
+    &:hover .projects__text {
+      opacity: 0;
+      top: 200%;
+      transition: all 3s ease;
+    }
+  }
+
+  &__figure {
+    margin: 3rem;
+    max-height: 50rem;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0.3rem 0.3rem 1rem rgba(#000, 0.4);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      height: 200%;
+      width: 200%;
+      border-radius: 100rem;
+      background: radial-gradient(
+        at left top,
+        rgba($color-primary-light, 0.9) 20%,
+        rgba($color-primary-light, 0.9) 30%,
+        rgba($color-primary-dark, 0.9) 50%
+      );
+      transition: all 3s ease 0.4s, top 0.1s ease;
+    }
+  }
+  // Neessary so the footer stays at the bottom when scrolling.
+  &__image-container {
+    overflow: auto;
+  }
+  &__image {
+    width: 100%;
+    height: 90%;
+    margin-bottom: 10%;
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    text-align: justify;
+    color: $color-grey-light-1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(#000, 0.6);
+    width: 90%;
+    height: 90%;
+    padding: 2rem;
+    border-radius: 5px;
+    transition: all 3s ease 0.4s;
+  }
+
+  &__list {
+    padding: 1rem;
+
+    &-items {
+      &:not(:first-child) {
+        padding-top: 0.5rem;
+      }
+      &:not(:last-child) {
+        padding-bottom: 0.5rem;
+      }
+    }
+  }
+
+  &__footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 10%;
+    width: 100%;
+    background: radial-gradient(
+      at right top,
+      rgba($color-primary-light, 0.9),
+      rgba($color-primary-dark, 0.9)
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform-origin: bottom;
+    transition: all 1s ease;
+  }
+
+  &__link {
+    background: rgba(#000, 0.6);
+    padding: 0.6rem 35%;
+    text-decoration: none;
+    color: $color-grey-light-1;
+    font-size: 1.6rem;
+    white-space: nowrap;
+    border-radius: 5px;
+    transform: translateY(5rem);
+    opacity: 0;
+  }
+}
